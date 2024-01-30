@@ -112,7 +112,7 @@ function arrayobject(test) {
   //   console.log(arraynew);
 
   /////////////LOOP OVER NEW ARRAY
-  const male = [];
+  const male = []; /// contain all males
   const females = [];
   const trans = [];
 
