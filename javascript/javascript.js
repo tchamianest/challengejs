@@ -165,8 +165,10 @@ function arrayobject(test) {
         [nameone]: { secondname: secondnamea, ages: agesz },
       });
     }
-    console.log(sigle);
-    console.log(...datamanupulatemale);
+    // console.log(sigle);
+    // console.log(...datamanupulatemale);
+    const objectaj = { `${sigle}`: { ...datamanupulatemale } };
+    console.log(objectaj);
     /// here i need to console the data basedd on the male and female but me i oprint it based on gender
   }
 
