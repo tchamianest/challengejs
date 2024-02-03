@@ -167,6 +167,7 @@ function arrayobject(test) {
     }
     console.log(sigle);
     console.log(...datamanupulatemale);
+    /// here i need to console the data basedd on the male and female but me i oprint it based on gender
   }
 
   /////create the the array of male contain the males with the object like the format
