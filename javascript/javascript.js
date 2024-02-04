@@ -129,6 +129,7 @@ function arrayobject(test) {
     }
     arraynew.push(values);
   }
+  // console.log(arraynew);
   //   console.log(arraynew);
 
   /////////////LOOP OVER NEW ARRAY
@@ -167,8 +168,7 @@ function arrayobject(test) {
     }
     // console.log(sigle);
     // console.log(...datamanupulatemale);
-    const objectaj = { `${sigle}`: { ...datamanupulatemale } };
-    console.log(objectaj);
+    return { [sigle]: { ...datamanupulatemale } };
     /// here i need to console the data basedd on the male and female but me i oprint it based on gender
   }
 
@@ -185,9 +185,17 @@ function arrayobject(test) {
   //     [nameone]: { secondname: secondnamea, ages: agesz },
   //   });
   // }
-  differentiate(male, "males :");
-  differentiate(females, "Female :");
-  differentiate(trans, "Trans-gender :");
+  const malesa = differentiate(male, "males :");
+  const female = differentiate(females, "Female :");
+  const transgend = differentiate(trans, "Trans-gender :");
+
+  ///// HOW I MERGE ALL THE OBJECT INSIDER ONE
+  const final = {
+    ...malesa,
+    ...transgend,
+    ...female,
+  };
+  console.log(final);
 
   ///// console it with the finale needed result
   // console.log(datamanupulatemale);
