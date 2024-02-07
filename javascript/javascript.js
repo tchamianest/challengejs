@@ -187,12 +187,11 @@ function arrayobject(test) {
   // }
   const malesa = differentiate(male, "males :");
   const female = differentiate(females, "Female :");
-  const transgend = differentiate(trans, "Trans-gender :");
+  // const transgend = differentiate(trans, "Trans-gender :");
 
   ///// HOW I MERGE ALL THE OBJECT INSIDER ONE
   const final = {
     ...malesa,
-    ...transgend,
     ...female,
   };
   console.log(final);
