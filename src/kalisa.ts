@@ -49,22 +49,63 @@
 
 //////////////////////////////////////////////////////////////////
 ////////print card
-function Printnum(pts: { x: string; y: number }): void {
-  console.log(`kalisa number ` + pts.x);
-  console.log(`nammes is the ${pts.y}`);
+// function Printnum(pts: { x: string; y: number }): void {
+//   console.log(`kalisa number ` + pts.x);
+//   console.log(`nammes is the ${pts.y}`);
+// }
+
+// Printnum({ x: "32", y: 56 });
+
+// ////////THE LAST FUNCTION
+
+// function Primitive(ob: { firstname: string; last?: string }) {
+//   console.log(ob.firstname.toUpperCase());
+
+//   ///CHECK FIRST
+//   if (ob.last !== undefined) {
+//     console.log(ob.last.toUpperCase());
+//   }
+
+//   console.log(ob.last?.toUpperCase());
+// }
+
+///////////////////////////object and function
+/////FUNCTION
+
+interface Typesome {
+  readonly name: string;
 }
 
-Printnum({ x: "32", y: 56 });
+function Typesome(obj: Typesome) {
+  ///we can read data from it
+  console.log("prop have the value " + obj.name);
 
-////////THE LAST FUNCTION
-
-function Primitive(ob: { firstname: string; last?: string }) {
-  console.log(ob.firstname.toUpperCase());
-
-  ///CHECK FIRST
-  if (ob.last !== undefined) {
-    console.log(ob.last.toUpperCase());
-  }
-
-  console.log(ob.last?.toUpperCase());
+  ////but here we can not reassign
+  // obj.name = "kalisa ";
 }
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface ReadonlyPerson {
+  name: string;
+  age: number;
+}
+
+let People: Person = {
+  name: "kalisa daniel",
+  age: 32,
+};
+
+console.log(People);
+
+let Peopleread: ReadonlyPerson = People;
+
+Peopleread = {
+  name: "kajuga",
+  age: 43,
+};
+
+console.log(Peopleread);
